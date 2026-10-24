@@ -131,13 +131,9 @@ I build complete products across the stack, direct autonomous AI coding agents t
 
 ### `06 / BLOODLINE SIGNATURE`
 
-```text
-  ____      _    __  __ ___    ____ _     ___ _____ ____ _   _ 
- |  _ \    / \  |  \/  |_ _|  / ___| |   |_ _|_   _/ ___| | | |
- | |_) |  / _ \ | |\/| || |  | |  _| |    | |  | || |   | |_| |
- |  _ <  / ___ \| |  | || |  | |_| | |___ | |  | || |___|  _  |
- |_| \_\/_/   \_\_|  |_|___|  \____|_____|___| |_| \____|_| |_|
-```
+<div align="center">
+  <img src="assets/signature-rami-glitch.png" alt="Rami GLITCH Signature" width="480" />
+</div>
 
 <div align="center">
   <img src="assets/bloodline-footer.svg" alt="Frozen Blood // Bloodline Signature" width="100%" />
