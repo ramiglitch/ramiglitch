@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 110" width="100%" height="auto">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&amp;display=swap');
+
+      .mono {
+        font-family: 'JetBrains Mono', 'SF Pro Mono', 'Fira Code', 'Roboto Mono', Menlo, Consolas, monospace;
+      }
+
+      .pulse-line {
+        stroke-dasharray: 400;
+        stroke-dashoffset: 400;
+        animation: trace-pulse 4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+      }
+
+      @keyframes trace-pulse {
+        0% { stroke-dashoffset: 400; opacity: 0.2; }
+        50% { stroke-dashoffset: 0; opacity: 1; }
+        100% { stroke-dashoffset: -400; opacity: 0.2; }
+      }
+
+      @keyframes beacon-glow {
+        0%, 100% { opacity: 0.4; }
+        50% { opacity: 1; }
+      }
+
+      .beacon {
+        animation: beacon-glow 2s ease-in-out infinite;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .pulse-line, .beacon { animation: none; stroke-dashoffset: 0; opacity: 1; }
+      }
+    </style>
+
+    <linearGradient id="blood-trace" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#285A83" stop-opacity="0.1"/>
+      <stop offset="35%" stop-color="#285A83" stop-opacity="0.6"/>
+      <stop offset="48%" stop-color="#A30F2D" stop-opacity="1"/>
+      <stop offset="52%" stop-color="#E7F8FF" stop-opacity="1"/>
+      <stop offset="55%" stop-color="#A30F2D" stop-opacity="1"/>
+      <stop offset="65%" stop-color="#285A83" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#285A83" stop-opacity="0.1"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Container Base -->
+  <rect width="800" height="110" rx="4" fill="#050609" stroke="#171A22" stroke-width="1"/>
+
+  <!-- Top Decorative Division -->
+  <line x1="0" y1="1" x2="800" y2="1" stroke="#285A83" stroke-width="1" stroke-opacity="0.6"/>
+
+  <!-- Electro-Fissure Baseline -->
+  <path d="M 0 52 L 320 52 L 340 52 L 350 40 L 360 64 L 370 32 L 380 72 L 390 44 L 400 52 L 800 52"
+        fill="none" stroke="#171A22" stroke-width="1"/>
+
+  <!-- Dynamic Trace Overlay -->
+  <path d="M 0 52 L 320 52 L 340 52 L 350 40 L 360 64 L 370 32 L 380 72 L 390 44 L 400 52 L 800 52"
+        fill="none" stroke="url(#blood-trace)" stroke-width="2" class="pulse-line"/>
+
+  <!-- End of File Dossier Typography -->
+  <g transform="translate(400, 24)">
+    <circle cx="-170" cy="-3.5" r="3" fill="#A30F2D" class="beacon"/>
+    <text text-anchor="middle" class="mono" fill="#A8ABB5" font-size="9" font-weight="700" letter-spacing="2px">
+      // DOSSIER CONCLUDED // CASE REPOSITORY ARCHIVED //
+    </text>
+    <circle cx="170" cy="-3.5" r="3" fill="#A7E8FF" class="beacon"/>
+  </g>
+
+  <!-- Primary Sign-off Line -->
+  <g transform="translate(400, 88)">
+    <text text-anchor="middle" class="mono" fill="#E7F8FF" font-size="11" font-weight="800" letter-spacing="3px">
+      RAMI GLITCH <tspan fill="#A30F2D">·</tspan> <tspan fill="#A7E8FF">ORCHESTRATE</tspan> <tspan fill="#737A8C">·</tspan> <tspan fill="#E7F8FF">AUDIT</tspan> <tspan fill="#737A8C">·</tspan> <tspan fill="#A30F2D">SHIP</tspan>
+    </text>
+  </g>
+</svg>

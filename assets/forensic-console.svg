@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 220" width="100%" height="auto">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&amp;display=swap');
+
+      .mono {
+        font-family: 'JetBrains Mono', 'SF Pro Mono', 'Fira Code', 'Roboto Mono', Menlo, Consolas, monospace;
+      }
+
+      .cmd-prompt { fill: #285A83; font-size: 11.5px; font-weight: 700; }
+      .cmd-text { fill: #E7F8FF; font-size: 11.5px; font-weight: 600; }
+      .out-tag-red { fill: #A30F2D; font-size: 11px; font-weight: 700; }
+      .out-tag-ice { fill: #A7E8FF; font-size: 11px; font-weight: 700; }
+      .out-text { fill: #A8ABB5; font-size: 11.5px; }
+
+      @keyframes console-blink {
+        0%, 49% { opacity: 1; }
+        50%, 100% { opacity: 0; }
+      }
+
+      .cursor {
+        fill: #A7E8FF;
+        animation: console-blink 1s infinite;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .cursor { animation: none; opacity: 1; }
+      }
+    </style>
+  </defs>
+
+  <!-- Base Console Frame -->
+  <rect width="800" height="220" rx="4" fill="#050609" stroke="#171A22" stroke-width="1"/>
+
+  <!-- Console Header Bar -->
+  <rect width="800" height="28" fill="#0A0E17" rx="4"/>
+  <line x1="0" y1="28" x2="800" y2="28" stroke="#171A22" stroke-width="1"/>
+
+  <!-- Header Markers -->
+  <circle cx="16" cy="14" r="3.5" fill="#490817"/>
+  <circle cx="28" cy="14" r="3.5" fill="#A30F2D"/>
+  <circle cx="40" cy="14" r="3.5" fill="#285A83"/>
+  <text x="56" y="18" class="mono" fill="#737A8C" font-size="9.5" font-weight="700" letter-spacing="1.5px">
+    FORENSIC TELEMETRY CONSOLE // SEC-CHANNEL [0x7F]
+  </text>
+  <text x="730" y="18" class="mono" fill="#A30F2D" font-size="9" font-weight="800">ENCRYPTED</text>
+
+  <!-- Output Lines -->
+  <!-- Line 1 -->
+  <g transform="translate(20, 56)">
+    <text class="mono">
+      <tspan class="cmd-prompt">sec-node:~$ </tspan>
+      <tspan class="cmd-text">identity.inspect()</tspan>
+    </text>
+  </g>
+  <g transform="translate(20, 76)">
+    <text class="mono">
+      <tspan class="out-tag-ice">[SUBJECT] </tspan>
+      <tspan class="out-text">Rami GLITCH · Full-Stack Developer · AI-Native Engineer · Security Enthusiast</tspan>
+    </text>
+  </g>
+
+  <!-- Line 2 -->
+  <g transform="translate(20, 108)">
+    <text class="mono">
+      <tspan class="cmd-prompt">sec-node:~$ </tspan>
+      <tspan class="cmd-text">harness.status()</tspan>
+    </text>
+  </g>
+  <g transform="translate(20, 128)">
+    <text class="mono">
+      <tspan class="out-tag-red">[EVIDENCE] </tspan>
+      <tspan class="out-text">TieWork preview active // Monorepo Cordis Plugin Platform // Electron &amp; Web</tspan>
+    </text>
+  </g>
+
+  <!-- Line 3 -->
+  <g transform="translate(20, 160)">
+    <text class="mono">
+      <tspan class="cmd-prompt">sec-node:~$ </tspan>
+      <tspan class="cmd-text">echo $CORE_PROTOCOL</tspan>
+    </text>
+  </g>
+  <g transform="translate(20, 180)">
+    <text class="mono">
+      <tspan class="out-tag-ice">[LAW] </tspan>
+      <tspan class="out-text">&quot;I direct the AI. I own the architecture.&quot;</tspan>
+      <tspan class="cursor" dx="6">█</tspan>
+    </text>
+  </g>
+</svg>
